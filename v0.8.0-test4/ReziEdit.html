@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ReziSolids</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+    canvas {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: black;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+
+  <script>
+		var Module = {
+			preRun: [],
+			print: (...args) => console.log('[stdout]: ' + args.join(' ')),
+			printErr: (...args) => console.log('[stderr]: ' + args.join(' ')),
+		};
+		window.onerror = (event) => console.log('[onerror]: ' + event.message);
+		document.addEventListener('keydown', (e) => {
+			if (e.ctrlKey && e.key === 'o') {
+				e.preventDefault();
+			}
+		});
+		document.addEventListener('click', (e) => {
+			e.preventDefault();
+			e.stopPropagation();
+			return false;
+		});
+	</script>
+
+  <script async type="text/javascript" src="ReziEdit.js"></script>
+</body>
+</html>
