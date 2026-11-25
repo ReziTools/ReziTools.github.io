@@ -1,17 +1,185 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>ReziTools</title>
+  <meta charset="utf-8">
+  <title>ReziTools Web Launcher</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: dark;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 2rem;
+      font-family: Roboto, system-ui, sans-serif;
+      background: #14171c;
+      color: #e6e9ee;
+      line-height: 1.5;
+      font-size: 1.0625rem;
+    }
+    main {
+      max-width: 46rem;
+      margin: 0 auto;
+    }
+    .hero {
+      padding: 1.5rem 0 2rem;
+      border-bottom: 1px solid #2c333d;
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 700;
+      margin: 0 0 0.5rem;
+    }
+    .hero p {
+      margin: 0;
+      color: #9aa4b0;
+      max-width: 40rem;
+    }
+    h2 {
+      font-weight: 700;
+      margin-top: 2rem;
+      border-bottom: 1px solid #2c333d;
+      padding-bottom: 0.25rem;
+    }
+    .blurb {
+      color: #9aa4b0;
+      font-size: 1rem;
+      margin: 0.5rem 0 1rem;
+      max-width: 40rem;
+    }
+    a {
+      color: #7ab8ff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .versions {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .versions li {
+      margin: 0;
+    }
+    .versions a,
+    .versions .soon {
+      display: block;
+      padding: 0.6rem 0.8rem;
+      background: #1c2129;
+      border: 1px solid #2c333d;
+      border-radius: 8px;
+      color: #e6e9ee;
+      transition: border-color 0.15s ease, background 0.15s ease;
+    }
+    .versions a:hover {
+      background: #232a34;
+      border-color: #7ab8ff;
+      text-decoration: none;
+    }
+    .versions .soon {
+      border-style: dashed;
+      color: #9aa4b0;
+    }
+    .versions .tag {
+      display: block;
+      font-size: 0.75rem;
+      color: #9aa4b0;
+    }
+    .versions .latest {
+      border-color: #3d6ea5;
+      background: #1d2733;
+    }
+    .versions .latest:hover {
+      border-color: #7ab8ff;
+    }
+    .badge {
+      font-size: 0.75rem;
+      margin-left: 0.4rem;
+      color: #7ab8ff;
+      vertical-align: middle;
+    }
+    .badge.warn {
+      color: #d8b36a;
+    }
+    .badge.orange {
+      color: #e08a4c;
+    }
+    .lic {
+      font-size: 0.85rem;
+      margin: 0.5rem 0 0;
+    }
+    .note {
+      color: #9aa4b0;
+      font-size: 0.9rem;
+      margin: 0.5rem 0 1rem;
+    }
+    footer {
+      margin-top: 2.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid #2c333d;
+      color: #9aa4b0;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 
 <body>
-  <h1>ReziTools</h1>
-  <p>Our current projects include:</p>
-  <ul>
-    <li><a href="/rezisolids.html">ReziSolids</a></li>
-    <li><a href="/rezisim.html">ReziSim Legacy (ReziEngine)</a></li>
-  </ul>
+  <main>
+    <header class="hero">
+      <h1>ReziTools Web Launcher</h1>
+      <p>Web builds of our educational structural mechanics solvers, running directly in your browser.
+        Pick a version below to launch it.</p>
+    </header>
+
+    <h2>ReziSolids</h2>
+    <p class="blurb">A high-performance, realtime linear solver and interactive environment, rebuilt for 2D and 3D
+      elements with WebGPU as the renderer.</p>
+    <ul class="versions">
+      <li><span class="soon">ReziSolids 2026<span class="tag">Snapshots coming soon</span></span></li>
+    </ul>
+
+    <h2>ReziSolids Classic</h2>
+    <p class="blurb">An educational program and library for solving the problems commonly encountered in Strength of
+      Materials courses in a unified and consistent way, an easy-to-use alternative to MDSolids, with beam problems
+      solved in real time.</p>
+    <p class="note">Development of ReziSolids Classic has concluded with 2026 Classic.</p>
+    <p class="lic"><a href="license.html">Third-party libraries &amp; licenses</a></p>
+    <ul class="versions">
+      <li><a class="latest" href="v1.0.0/ReziEdit.html">v1.0.0<span class="badge">latest</span><span class="tag">ReziSolids 2026 Classic</span></a></li>
+      <li><a href="v0.9.0/ReziEdit.html">v0.9.0<span class="tag">ReziSolids 2025R1</span></a></li>
+      <li><a href="v0.9.0-nosimd/ReziEdit.html">v0.9.0<span class="badge orange">legacy browsers</span><span class="tag">ReziSolids 2025R1</span></a></li>
+      <li><a href="v0.8.0-test4/ReziEdit.html">v0.8.0-test4<span class="badge warn">test</span></a></li>
+      <li><a href="v0.8.0-test3/ReziEdit.html">v0.8.0-test3<span class="badge warn">test</span></a></li>
+      <li><a href="v0.8.0-test2/ReziEdit.html">v0.8.0-test2<span class="badge warn">test</span></a></li>
+      <li><a href="v0.8.0-test0/ReziEdit.html">v0.8.0-test0<span class="badge warn">test</span></a></li>
+    </ul>
+
+    <h2>ReziEngine</h2>
+    <p class="blurb">Our original solver for Resistance of Materials problems. Kept online for archival.</p>
+    <p class="lic"><a href="license.html">Third-party libraries &amp; licenses</a></p>
+    <ul class="versions">
+      <li><a class="latest" href="v0.7.0/ReziEdit.html">v0.7.0<span class="badge">latest</span></a></li>
+      <li><a href="v0.7.0-prerelease2/ReziEdit.html">v0.7.0-prerelease2<span class="badge warn">prerelease</span></a></li>
+      <li><a href="v0.7.0-prerelease/ReziEdit.html">v0.7.0-prerelease<span class="badge warn">prerelease</span></a></li>
+      <li><a href="v0.6.4/ReziEdit.html">v0.6.4</a></li>
+    </ul>
+
+    <footer>
+      <p>&copy; 2026 ReziTools. All rights reserved. Redistribution is not allowed.</p>
+      <p><a href="license.html">Licenses &amp; third-party libraries</a></p>
+    </footer>
+  </main>
 </body>
 
 </html>

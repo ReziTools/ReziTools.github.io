@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Licenses &amp; Third-Party Libraries - ReziTools Web Launcher</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: dark;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 2rem;
+      font-family: Roboto, system-ui, sans-serif;
+      background: #14171c;
+      color: #e6e9ee;
+      line-height: 1.5;
+      font-size: 1.0625rem;
+    }
+    main {
+      max-width: 46rem;
+      margin: 0 auto;
+    }
+    h1,
+    h2 {
+      font-weight: 700;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-top: 0;
+    }
+    h2 {
+      font-size: 1.5rem;
+      margin: 2rem 0 0.75rem;
+      padding-bottom: 0.25rem;
+      border-bottom: 1px solid #2c333d;
+    }
+    a {
+      color: #7ab8ff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+    th,
+    td {
+      text-align: left;
+      padding: 0.4rem 0.6rem;
+      border-bottom: 1px solid #2c333d;
+      vertical-align: top;
+    }
+    th {
+      color: #9aa4b0;
+      font-weight: 600;
+    }
+    .purpose {
+      color: #9aa4b0;
+    }
+    footer {
+      margin-top: 2.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid #2c333d;
+      color: #9aa4b0;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>Licenses &amp; Third-Party Libraries</h1>
+    <p>The web builds of ReziTools programs are built using the open-source libraries listed below.</p>
+
+    <h2>ReziSolids</h2>
+    <p>License information for the new ReziSolids is contained in the executables themselves.</p>
+
+    <h2>ReziSolids Classic</h2>
+    <table>
+      <tr>
+        <th>Library</th>
+        <th>Version</th>
+        <th>Purpose</th>
+      </tr>
+      <tr><td><a href="https://eigen.tuxfamily.org/">Eigen</a></td><td>3.4.1</td><td class="purpose">Linear algebra for C++</td></tr>
+      <tr><td><a href="https://github.com/floooh/sokol">sokol</a></td><td>f5e8833</td><td class="purpose">Minimalistic rendering library</td></tr>
+      <tr><td><a href="https://github.com/floooh/sokol-tools-bin">sokol-shdc</a></td><td>master</td><td class="purpose">Shader cross-compiler</td></tr>
+      <tr><td><a href="https://github.com/g-truc/glm">GLM</a> (starting with 2026 Classic)</td><td>1.0.3</td><td class="purpose">Vector/matrix math for rendering</td></tr>
+      <tr><td><a href="https://github.com/HandmadeMath/HandmadeMath">hmm</a> (until 2026 Classic)</td><td>142ba3c</td><td class="purpose">Vector/matrix math for rendering, replaced by GLM</td></tr>
+      <tr><td><a href="https://github.com/Chlumsky/msdf-atlas-gen">msdf-atlas-gen</a></td><td>v1.4</td><td class="purpose">MSDF font atlas generator</td></tr>
+      <tr><td><a href="https://github.com/nlohmann/json">nlohmann_json</a></td><td>v3.12.0</td><td class="purpose">JSON serialization/deserialization</td></tr>
+      <tr><td><a href="https://github.com/nothings/stb">stb</a></td><td>9600522</td><td class="purpose">Image decoding</td></tr>
+      <tr><td><a href="https://github.com/nodef/tinyfiledialogs.c">tinyfiledialogs</a></td><td>a824a8d</td><td class="purpose">Native file dialogs</td></tr>
+      <tr><td><a href="https://github.com/Armchair-Software/emscripten-browser-file">emscripten-browser-file</a></td><td>26e9535</td><td class="purpose">File dialogs in browser</td></tr>
+      <tr><td><a href="https://zlib.net/">zlib</a></td><td>emscripten port</td><td class="purpose">Compression support for logger</td></tr>
+      <tr><td><a href="http://www.libpng.org/">libpng</a></td><td>emscripten port</td><td class="purpose">PNG support for msdf-atlas-gen</td></tr>
+      <tr><td><a href="https://freetype.org/">freetype</a></td><td>emscripten port</td><td class="purpose">Font rendering for msdf-atlas-gen (web build)</td></tr>
+    </table>
+
+    <h2>ReziEngine</h2>
+    <table>
+      <tr>
+        <th>Library</th>
+        <th>Version</th>
+        <th>Purpose</th>
+      </tr>
+      <tr><td><a href="https://github.com/raysan5/raylib">raylib</a></td><td>5.0</td><td class="purpose">Rendering and GUI</td></tr>
+      <tr><td><a href="https://gitlab.com/libeigen/eigen">Eigen</a></td><td>3.4.0</td><td class="purpose">Linear algebra for C++</td></tr>
+      <tr><td><a href="https://github.com/ToruNiina/toml11">toml11</a></td><td>3.8.1</td><td class="purpose">TOML configuration parsing</td></tr>
+    </table>
+
+    <footer>
+      <p>&copy; 2026 ReziTools. All rights reserved. Redistribution is not allowed.</p>
+      <p><a href="index.html">Back to the launcher</a></p>
+    </footer>
+  </main>
+</body>
+
+</html>
